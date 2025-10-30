@@ -1,34 +1,48 @@
-//202510304222
+//20251030422
 //fxy05.07.26@qq.com
 //王鑫
 #include <stdio.h>
 
-int main() {
-    int a, b;
-    char operator;
+
+int is_prime(int n) 
+{
+    if (n <= 1)
+    {
+        return 0;  
+    }
+    if (n == 2)
+    {
+        return 1; 
+    }
+    int i=2;
+    while (i<n)
+    {
+        if(n%i==0)
+        {
+            return 0;
+        }
+        i++;
+    }
+    return 1;
     
-    // 输入两个整数和一个运算符
-    printf("请输入两个整数和一个运算符（格式：a b operator）：");
-    scanf("%d %d %c", &a, &b, &operator);
+  
+}
+
+int main()
+{
+    int n;
     
-    // 根据运算符计算结果
-    switch(operator) {
-        case '+':
-            printf("%d\n", a + b);
-            break;
-        case '-':
-            printf("%d\n", a - b);
-            break;
-        case '*':
-            printf("%d\n", a * b);
-            break;
-        case '/':
-            // 题目说明仅处理除数不为0的情况
-            printf("%d\n", a / b);
-            break;
-        default:
-            printf("无效的运算符！\n");
-            break;
+    
+    scanf("%d", &n);
+    
+   
+    if (is_prime(n))
+    {
+        printf("密钥安全，密码设置成功\n");
+    }
+     else
+    {
+        printf("密钥不安全，请重新输入\n");
     }
     
     return 0;
