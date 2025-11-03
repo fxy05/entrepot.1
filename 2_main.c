@@ -1,25 +1,30 @@
 //202510304222
 //fxy05.07.26@qq.com
 //王鑫
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
- int first=1;   
-for (int num = 100; num <=999; num++)
+int arr[3][3];
+int i,j;
+for ( i = 0; i < 3; i++)
 {
-    int a=num/100;
-    int b=num/10%10;
-    int c=num%10;
+    char col[4];
+    scanf("%s",col);
 
-if(a*a*a+b*b*b+c*c*c==num)
+for ( j = 0; j < 3; j++)
 {
-    if(!first)
+   arr[i][j]=col[j]-'0';
+}
+}
+for (i = 0; i < 3; i++)
 {
-printf("");
+    for ( j = 0; j <3 ; j++)
+    {
+        printf("%d",arr[j][i]);
+    }
+    printf("\n");
 }
-printf("%d ",num);
-first=0;
-}
-}
+
 return 0;
+
 }
