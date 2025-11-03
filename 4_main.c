@@ -1,27 +1,29 @@
 //202510304222
 //fxy05.07.26@qq.com
 //王鑫
-#include<stdio.h>
+#include <stdio.h>
+int power(int a,int b)
+{
+    int result=1;
+for (int i = 0; i < b; i++)
+{
+    result*=a;
+}
+return result;
+}
 int main()
 {
- int first=1;   
-int num=100;
-while (num<=999)
+int sum=0;
+for (int i = 0; i <=5; i++)
 {
-    int a=num/100;
-    int b=num/10%10;
-    int c=num%10;
-
-if(a*a*a+b*b*b+c*c*c==num)
-{
-    if(!first)
-{
-printf("");
+    sum+=power(i,2);
 }
-printf("%d ",num);
-first=0;
-}
-num++;
-}
+printf("%d\n",sum);
 return 0;
+
+
+
+
+
+
 }
