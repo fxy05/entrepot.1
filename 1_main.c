@@ -2,26 +2,19 @@
 //fxy05.07.26@qq.com
 //王鑫
 #include <stdio.h>
-int main()
-{
-int arr[3][3];
-int i,j;
-for ( i = 0; i < 3; i++)
-{
-for ( j = 0; j < 3; j++)
-{
-  scanf("%1d",&arr[i][j]);
-}
-}
-for (i = 0; i < 3; i++)
-{
-    for ( j = 0; j <3 ; j++)
-    {
-        printf("%d",arr[i][j]);
+
+int main() {
+    char arr[3][4];  // 每行最多3个字符 + 1个字符串结束符'\0'
+    
+    // 读取3行输入
+    for (int i = 0; i < 3; i++) {
+        scanf("%s", arr[i]);  // 读取一行字符串（不含空格和换行）
     }
-    printf("\n");
-}
-
-return 0;
-
+    
+    // 原样输出3行
+    for (int i = 0; i < 3; i++) {
+        printf("%s\n", arr[i]);
+    }
+    
+    return 0;
 }
