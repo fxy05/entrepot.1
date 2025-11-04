@@ -8,12 +8,9 @@ int arr[3][3];
 int i,j;
 for ( i = 0; i < 3; i++)
 {
-    char col[4];
-    scanf("%s",col);
-
 for ( j = 0; j < 3; j++)
 {
-   arr[i][j]=col[j]-'0';
+ scanf("%1d",&arr[i][j]); 
 }
 }
 for (i = 0; i < 3; i++)
