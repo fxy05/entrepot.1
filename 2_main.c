@@ -1,27 +1,32 @@
 //202510304222
 //fxy05.07.26@qq.com
 //王鑫
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-int arr[3][3];
-int i,j;
-for ( i = 0; i < 3; i++)
-{
-for ( j = 0; j < 3; j++)
-{
- scanf("%1d",&arr[i][j]); 
-}
-}
-for (i = 0; i < 3; i++)
-{
-    for ( j = 0; j <3 ; j++)
+    int matrix[3][3];
+    printf("请输入3*3矩阵(每行3个数字,共3行):\n");
+    for(int i=0;i<3;i++)
     {
-        printf("%d",arr[j][i]);
+        for(int j=0;j<3;j++)
+        {
+            scanf("%d", &matrix[i][j]);
+        }
     }
-    printf("\n");
-}
 
-return 0;
-
+    printf("输出的3*3矩阵为:\n");
+   
+    for(int j=0;j<3;j++)
+    {
+        
+        printf("%d", matrix[0][j]);
+    
+        for(int i=1;i<3;i++)
+        {
+            printf(" %d", matrix[i][j]);
+        }
+       
+        printf("\n");
+    }
+    return 0;
 }
