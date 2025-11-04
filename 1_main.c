@@ -1,19 +1,27 @@
-//202510304222
+//2020510304222
 //fxy05.07.26@qq.com
 //王鑫
 #include <stdio.h>
 
 int main() {
-    char arr[3][4];  // 每行最多3个字符 + 1个字符串结束符'\0'
+    int matrix[3][3];
+    int i, j;
     
-    // 读取3行输入
-    for (int i = 0; i < 3; i++) {
-        scanf("%s", arr[i]);  // 读取一行字符串（不含空格和换行）
+    // 输入3×3矩阵
+    printf("请输入3×3矩阵的元素（按行输入）：\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            scanf("%d", &matrix[i][j]);
+        }
     }
     
-    // 原样输出3行
-    for (int i = 0; i < 3; i++) {
-        printf("%s\n", arr[i]);
+    // 输出矩阵
+    printf("输出矩阵：\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%d", matrix[i][j]);
+        }
+        printf("\n");
     }
     
     return 0;
