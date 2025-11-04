@@ -3,30 +3,43 @@
 //王鑫
 #include <stdio.h>
 
-int main()
- {
-    int nums[5];
-    int count = 0;
-    int num;
-    
-  
-    while (count < 5) 
+int array_sum(int arr[], int length) 
+{
+    int sum = 0;
+    for (int i = 0; i < length; i++) 
     {
-        scanf("%d", &num);
-        if (num % 2 == 0) 
-        {  
-            nums[count] = num;
-            count++;
-        }
-  
+        sum += arr[i];
     }
+    return sum;
+}
+
+int array_product(int arr[], int length) 
+{
+    int product = 1;
+    for (int i = 0; i < length; i++) 
+    {
+        product *= arr[i];
+    }
+    return product;
+}
+
+int main() 
+{
+    int arr[5];
     
- 
+    
+    printf("请输入5个整数：\n");
     for (int i = 0; i < 5; i++) 
     {
-        printf("%d ", nums[i]);
+        scanf("%d", &arr[i]);
     }
-    printf("\n");
+    
+
+    int sum = array_sum(arr, 5);
+    int product = array_product(arr, 5);
+    
+    printf("数组元素的和：%d\n", sum);
+    printf("数组元素的积：%d\n", product);
     
     return 0;
 }
