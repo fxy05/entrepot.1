@@ -1,31 +1,24 @@
-//202510304222
+//20251030422
 //fxy05.07.26@qq.com
 //王鑫
 #include <stdio.h>
-int main() 
-{
-    int matrix[3][3];
-    printf("请输入3*3矩阵(每行3个数字,共3行):\n");
-    for (int i = 0; i < 3; i++) 
-    {
-        for (int j = 0; j < 3; j++) 
-        {
-            scanf("%d", &matrix[i][j]);
-        }
-    }
 
-    printf("输出：\n");
-    for (int i = 0; i < 3; i++)
-        {
-        
-        printf("%d", matrix[i][0]);
-        
-        for (int j = 1; j < 3; j++) 
-        {
-            printf(" %d", matrix[i][j]);
-        }
-        
-        printf("\n");
-    }
+int main()
+{
+    int a;
+    int *p;
+    
+    // 输入整数a并赋值
+    scanf("%d", &a);
+    
+    // 定义指针p指向a
+    p = &a;
+    
+    // 通过指针修改a的值（使a的值加10）
+    *p = *p + 10;
+    
+    // 分别打印a的值和指针指向的值
+    printf("%d,%d\n", a, *p);
+    
     return 0;
 }
