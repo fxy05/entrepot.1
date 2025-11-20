@@ -1,29 +1,27 @@
-//202510304222
+//20251030422
 //fxy05.07.26@qq.com
 //王鑫
 #include <stdio.h>
-int power(int a,int b)
+
+void increment(int *arr, int len) 
 {
-    int result=1;
-for (int i = 0; i < b; i++)
-{
-    result*=a;
+    for (int i = 0; i < len; i++) 
+    {
+        (*(arr + i))++;  // 等价于 arr[i]++
+    }
 }
-return result;
-}
-int main()
-{
-int sum=0;
-for (int i = 0; i <=5; i++)
-{
-    sum+=power(i,2);
-}
-printf("%d\n",sum);
-return 0;
 
-
-
-
-
-
+int main() {
+    int arr[5];
+    for (int i = 0; i < 5; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+    increment(arr, 5);  // 数组名本身是指针
+    for (int i = 0; i < 5; i++) 
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+    return 0;
 }
