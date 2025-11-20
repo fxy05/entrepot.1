@@ -1,8 +1,6 @@
 //202510304222
 //fxy05.07.26@qq.com
 //王鑫
-c
-   
 
 #include <stdio.h>
 
